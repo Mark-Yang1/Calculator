@@ -79,3 +79,4 @@ for(job of data){
     newOption.innerText = `${job[0]} $${job[1].toLocaleString("en-US")}`;
     jobList.appendChild(newOption);
 }
+
