@@ -73,10 +73,9 @@ const data = [
 
 const jobList = document.getElementById('jobList');
 
-for(job of data){
+for(job of data) {
     let newOption = document.createElement('option');
     newOption.value = job[1];
     newOption.innerText = `${job[0]} $${job[1].toLocaleString("en-US")}`;
     jobList.appendChild(newOption);
 }
-

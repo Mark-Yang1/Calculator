@@ -1,6 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 h1 {
     font-size: 200px;
     text-align: center;
+}
+
+section > p,
+section > textarea {
+    background-color: gray;
+    height: 10vh;
+    width: 60%;
+    font-size: 100px;
 }
 
 .summary {
@@ -12,4 +25,19 @@ h1 {
 .mid {
     display: flex;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+article > p {
+    text-align: start;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.margin5 {
+    margin: 4vh 0 4vh 0;
 }
