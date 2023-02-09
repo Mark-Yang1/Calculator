@@ -75,23 +75,25 @@ const jobList = document.getElementById('jobList');
 
 jobList.addEventListener('change', calculateBase, calculateGM);
 
-const GA = document.getElementById('GA');
+let GA = document.getElementById('GA');
 
-const GM = document.getElementById('GM');
+let GM = document.getElementById('GM');
 
-const FT = document.getElementById('FT');
+let FT = document.getElementById('FT');
 
-const ST = document.getElementById('ST');
+let ST = document.getElementById('ST');
 
-const SS = document.getElementById('SS');
+let SS = document.getElementById('SS');
 
-const MC = document.getElementById('MC');
+let MC = document.getElementById('MC');
 
-const SD = document.getElementById('SD');
+let SD = document.getElementById('SD');
 
-const RI = document.getElementById('RI');
+let RI = document.getElementById('RI');
 
-const MI = document.getElementById('MI');
+let MI = document.getElementById('MI');
+
+let TD = document.getElementById('TD');
 
 for(job of data) {
     let newOption = document.createElement('option');
@@ -101,12 +103,12 @@ for(job of data) {
 }
 
 function calculateBase() {
-    GA.innerText = Math.abs(jobList.value);
+    GA.innerText = Math.abs(jobList.value).toFixed(2);
     calculateGM();
 }
 
 function calculateGM() {
-    GM.innerText = Math.abs(jobList.value/12);
+    GM.innerText = Math.abs(jobList.value/12).toFixed(2);
     calculateFT();
     calculateST();
     calculateSS();
@@ -126,29 +128,34 @@ function calculateGM() {
 // }
 
 function calculateFT() {
-    FT.innerText = Math.abs(jobList.value/12 * 0.12);
+    FT.innerText = Math.abs(jobList.value/12 * 0.12).toFixed(2);
 }
 
 function calculateST() {
-    ST.innerText = Math.abs(jobList.value/12 * 0.07);
+    ST.innerText = Math.abs(jobList.value/12 * 0.07).toFixed(2);
 }
 
 function calculateSS() {
-    SS.innerText = Math.abs(jobList.value/12 * 0.062);
+    SS.innerText = Math.abs(jobList.value/12 * 0.062).toFixed(2);
 }
 
 function calculateMC() {
-    MC.innerText = Math.abs(jobList.value/12 * 0.0145);
+    MC.innerText = Math.abs(jobList.value/12 * 0.0145).toFixed(2);
 }
 
 function calculateSD() {
-    SD.innerText = Math.abs(jobList.value/12 * 0.01);
+    SD.innerText = Math.abs(jobList.value/12 * 0.01).toFixed(2);
 }
 
 function calculateRI() {
-    RI.innerText = Math.abs(jobList.value/12 * 0.05);
+    RI.innerText = Math.abs(jobList.value/12 * 0.05).toFixed(2);
+    calculateTD();
 }
 
 function calculateMI() {
-    MI.innerText = Math.abs(180);
+    MI.innerText = Math.abs(180 + 0);
+}
+
+function calculateTD() {
+    TD = Math.abs(FT + ST + SS + MC + RI + 180)
 }
