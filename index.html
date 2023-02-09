@@ -8,91 +8,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Calculate 101</h1>
+    <header>
+        <h1>Calculate 101</h1>
+    </header>
 
-    <article class="mid">
-        <p class="summary">This site has been dedicated to calculating your personal annual net income for entry level jobs. You can also keep track of, and add descriptions to transactions from your current money. Start by selecting a career below.</p>
-    </article>
+    <main>
+        <article class="mid">
+            <p class="summary">This site has been dedicated to calculating your personal annual net income for entry level jobs. You can also keep track of, and add descriptions to transactions from your current money. Start by selecting a career below.</p>
+        </article>
 
-    <section>
-        <section class="mid column margin5">
-        <h3>Select Career</h3>
-        <form>
-            <select name="cars" id="cars">
-                <option value="Accountant">Accountant</option>
-                <option value="Advance Tractor/Trailer Driver">Advance Tractor/Trailer Driver</option>
-                <option value="Agricultural Engineer">Agricultural Engineer</option>
-                <option value="Architect">Architect</option>
-                <option value="Auto Tech/Mechanic">Auto Tech/Mechanic</option>
-                <option value="Aviation Tech. Mechanic">Aviation Tech. Mechanic</option>
-                <option value="Biologist">Biologist</option>
-                <option value="Bus Driver">Bus Driver</option>
-                <option value="Business Development Officer">Business Development Officer</option>
-                <option value="Business Manager Hotel etc.">Business Manager Hotel etc.</option>
-                <option value="CNC Manufacturing">CNC Manufacturing</option>
-                <option value="Carpenter">Carpenter</option>
-                <option value="Chef">Chef</option>
-                <option value="Chemist">Chemist</option>
-                <option value="Civil Engineering Technician">Civil Engineering Technician</option>
-                <option value="Commercial Driver">Commercial Driver</option>
-                <option value="ComputerTechnician">ComputerTechnician</option>
-                <option value="Conserv./Environ. Science">Conserv./Environ. Science</option>
-                <option value="Correctional Officer">Correctional Officer</option>
-                <option value="Cosmetologist">Cosmetologist</option>
-                <option value="Credit Union/Bank Manager">Credit Union/Bank Manager</option>
-                <option value="Daycare Director">Daycare Director</option>
-                <option value="Dentist">Dentist</option>
-                <option value="Detective">Detective</option>
-                <option value="Diesel Tech/Mechanic">Diesel Tech/Mechanic</option>
-                <option value="Doctor/Physician">Doctor/Physician</option>
-                <option value="Electrician">Electrician</option>
-                <option value="Electronic Engineer">Electronic Engineer</option>
-                <option value="EMT">EMT</option>
-                <option value="Energy Management PG&E">Energy Management PG&E</option>
-                <option value="Engineer">Engineer</option>
-                <option value="Fashion Designer">Fashion Designer</option>
-                <option value="Fire Fighter">Fire Fighter</option>
-                <option value="Forest Ranger">Forest Ranger</option>
-                <option value="Graphic/Media Designer">Graphic/Media Designer</option>
-                <option value="H/C HVAC">H/C HVAC</option>
-                <option value="Highway Patrol">Highway Patrol</option>
-                <option value="Home Inspector">Home Inspector</option>
-                <option value="Industrial Mechanic">Industrial Mechanic</option>
-                <option value="Interior Designer">Interior Designer</option>
-                <option value="Investment Analyst">Investment Analyst</option>
-                <option value="Lab Technician">Lab Technician</option>
-                <option value="Landscaper Horticulture">Landscaper Horticulture</option>
-                <option value="lawyer">lawyer</option>
-                <option value="Marketing/Sales Manager">Marketing/Sales Manager</option>
-                <option value="Media/Communications">Media/Communications</option>
-                <option value="Medical RepairTech">Medical RepairTech></option>
-                <option value="Military">Military</option>
-                <option value="Nurse">Nurse</option>
-                <option value="Nutitionist">Nutitionist</option>
-                <option value="Oceanographer">Oceanographer</option>
-                <option value="Pastor">Pastor</option>
-                <option value="PGBEATT Technician">PGBEATT Technician</option>
-                <option value="Pharmacist">Pharmacist</option>
-                <option value="Photographer">Photographer</option>
-                <option value="Physical Therapist">Physical Therapist</option>
-                <option value="Pilot Commercial">Pilot Commercial</option>
-                <option value="Plumber">Plumber</option>
-                <option value="Police Officer">Police Officer</option>
-                <option value="Principal">Principal</option>
-                <option value="Probation Officer">Probation Officer</option>
-                <option value="Psychologist">Psychologist</option>
-                <option value="Retail Sales Associate">Retail Sales Associate</option>
-                <option value="Social Worker">Social Worker</option>
-                <option value="Solar Energy Tech">Solar Energy Tech</option>
-                <option value="Teacher">Teacher</option>
-                <option value="UPS/Fed Ex Driver">UPS/Fed Ex Driver</option>
-                <option value="Veterinarian">Veterinarian</option>
-                <option value="Welder/Metal Specialist">Welder/Metal Specialist</option>
-                <option value="Wind Energy Technician">Wind Energy Technician</option>
-            </select>
-            <input type="submit" value="Submit" onclick="">
-        </form>
-    </section>
+        <section>
+            <section class="mid column margin5">
+            <h3>Select Career</h3>
+            <form>
+                <select name="occupation" id="jobList">
+                    <option value="null">Select an occupation</option>
+                </select>
+            </form>
+        </section>
 
         <section class="mid column margin5">
             <h3>Gross Income</h3>
@@ -138,23 +71,23 @@
 
         <section class="mid column margin5">
             <h3>Medical Insurance</h3>
-            <textarea id="GM"></textarea>
+            <p id="MI"></p>
         </section>
 
         <section class="mid column margin5">
-            <h3>Total</h3>
+            <h3>Total Deductions</h3>
             <p></p>
         </section>
 
         <section class="mid column margin5">
             <h3>Net Income</h3>
         </section>
-    </section>
 
-    <section class="mid">
-        <h2>Checkbook</h2>
-    </section>
-    
+
+        <section class="mid">
+            <h2>Checkbook</h2>
+        </section>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>

@@ -73,9 +73,82 @@ const data = [
 
 const jobList = document.getElementById('jobList');
 
+jobList.addEventListener('change', calculateBase, calculateGM);
+
+const GA = document.getElementById('GA');
+
+const GM = document.getElementById('GM');
+
+const FT = document.getElementById('FT');
+
+const ST = document.getElementById('ST');
+
+const SS = document.getElementById('SS');
+
+const MC = document.getElementById('MC');
+
+const SD = document.getElementById('SD');
+
+const RI = document.getElementById('RI');
+
+const MI = document.getElementById('MI');
+
 for(job of data) {
     let newOption = document.createElement('option');
     newOption.value = job[1];
     newOption.innerText = `${job[0]} $${job[1].toLocaleString("en-US")}`;
     jobList.appendChild(newOption);
+}
+
+function calculateBase() {
+    GA.innerText = Math.abs(jobList.value);
+    calculateGM();
+}
+
+function calculateGM() {
+    GM.innerText = Math.abs(jobList.value/12);
+    calculateFT();
+    calculateST();
+    calculateSS();
+    calculateMC();
+    calculateSD();
+    calculateRI();
+    CalculateMI();
+}
+
+// function calculateTax() {
+//     calculateFT();
+//     calculateST();
+//     calculateSS();
+//     calculateMC();
+//     calculateSD();
+//     calculateRI();
+// }
+
+function calculateFT() {
+    FT.innerText = Math.abs(jobList.value/12 * 0.12);
+}
+
+function calculateST() {
+    ST.innerText = Math.abs(jobList.value/12 * 0.07);
+}
+
+function calculateSS() {
+    SS.innerText = Math.abs(jobList.value/12 * 0.062);
+}
+
+function calculateMC() {
+    MC.innerText = Math.abs(jobList.value/12 * 0.0145);
+}
+
+function calculateSD() {
+    SD.innerText = Math.abs(jobList.value/12 * 0.01);
+}
+
+function calculateRI() {
+    RI.innerText = Math.abs(jobList.value/12 * 0.05);
+}
+
+function calculateMI() {
+    MI.innerText = Math.abs(180);
 }
